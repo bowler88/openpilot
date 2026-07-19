@@ -221,7 +221,7 @@ class SelfdriveD(CruiseHelper):
       self.events.add(EventName.resumeBlocked)
 
     # Handle DM
-    if not self.CP.notCar:
+    if False: # not self.CP.notCar:
       # Block engaging until ignition cycle after max number or time of distractions
       if self.sm['driverMonitoringState'].lockout and not self.dm_lockout_set:
         self.params.put_bool("DriverTooDistracted", True)
